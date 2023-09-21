@@ -1,0 +1,24 @@
+//edit kind instance
+kubectl edit Deployment <kind-name>
+
+//undo deployment to previous state
+kubectl undo Deployment <kind-name>
+
+//Update image in a Deployment
+kubectl set image Deployment <name> nginx=nginx:1.24.0
+
+//Create a deployment from file
+kubectl create --filename=deployment.yaml --record=true
+
+//Check rollout/deployment history
+kubectl rollout history -f <filename>
+kubectl rollout history deployment <deployment-name>
+
+//Get all pods
+kubectl get pods
+
+//Get detailed info about a kind/object
+kubectl describe <pod/rc/ReplicationController/deployment> <kind-name>
+
+
+
